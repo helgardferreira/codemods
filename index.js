@@ -4,6 +4,7 @@ const path = require("path");
 const args = process.argv.slice(2);
 const targetPath = args[0];
 
+// N.B. Needs a target-files text file with the list of files to scan.
 const targetFilesConfig = path.join(__dirname, "./target-files.txt");
 
 fs.readFile(targetFilesConfig, "utf8", (err, data) => {
